@@ -1,7 +1,7 @@
 {
   "name": "renderoyuncu-afk-client",
   "productName": "RenderOyuncu AFK Client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RenderOyuncu sunucusu icin AFK client",
   "main": "src/main/main.js",
   "private": true,
