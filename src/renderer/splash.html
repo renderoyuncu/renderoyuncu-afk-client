@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>RenderOyuncu</title>
+  <link rel="stylesheet" href="fonts.css">
+  <style>
+    html, body { margin: 0; height: 100%; background: transparent; overflow: hidden; user-select: none; }
+    .card {
+      box-sizing: border-box; height: 100%; padding: 36px 44px 30px; border-radius: 28px;
+      display: flex; flex-direction: column; align-items: center;
+      font-family: 'Poppins', sans-serif; color: #f5efe8; -webkit-app-region: drag;
+      background: radial-gradient(circle at 50% 34%, #7a3a10 0%, #3f2110 36%, #1c130d 68%, #120e0b 100%);
+    }
+    img { height: 150px; filter: drop-shadow(0 6px 18px rgba(0, 0, 0, .55)); }
+    h1 { margin: 20px 0 0; font-size: 25px; font-weight: 800; letter-spacing: 3.5px; }
+    h1 span { color: #ff8a2b; }
+    .bar { width: 100%; height: 9px; margin-top: auto; border-radius: 9px; overflow: hidden; background: rgba(255, 255, 255, .09); }
+    .fill { width: 0; height: 100%; border-radius: 9px; background: linear-gradient(90deg, #ffae5c, #ff8a2b); transition: width .35s ease; }
+    .row { width: 100%; display: flex; justify-content: space-between; margin-top: 10px; font-size: 13px; color: #a79c91; }
+    #percent { color: #ffae5c; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="assets/logo.png" alt="">
+    <h1>RENDER <span>OYUNCU</span></h1>
+    <div class="bar"><div class="fill" id="fill"></div></div>
+    <div class="row"><span id="text">Başlatılıyor</span><span id="percent">0%</span></div>
+  </div>
+  <script src="splash.js"></script>
+</body>
+</html>

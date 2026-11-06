@@ -1,0 +1,56 @@
+{
+  "name": "renderoyuncu-afk-client",
+  "productName": "RenderOyuncu AFK Client",
+  "version": "1.0.0",
+  "description": "RenderOyuncu sunucusu icin AFK client",
+  "main": "src/main/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node test/run.js",
+    "dist": "electron-builder --win --publish never"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.11",
+    "minecraft-protocol": "^1.68.0",
+    "mineflayer": "^4.39.0"
+  },
+  "devDependencies": {
+    "@fontsource/poppins": "^5.3.0",
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0",
+    "minecraft-assets": "^1.19.0"
+  },
+  "build": {
+    "appId": "net.renderoyuncu.afkclient",
+    "productName": "RenderOyuncu AFK Client",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "RenderOyuncu-AFK-Client-Setup-${version}.${ext}"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "renderoyuncu",
+        "repo": "renderoyuncu-afk-client"
+      }
+    ]
+  },
+  "author": "RenderOyuncu",
+  "repository": "github:renderoyuncu/renderoyuncu-afk-client"
+}
